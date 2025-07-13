@@ -49,3 +49,12 @@ function Ispalindrome(original,num,revnum){
      return Ispalindrome(original,num,revnum)
 }
 console.log(Ispalindrome(633313336,633313336,0))
+
+console.log("fabonacci series") // time complexity (O(2^n))  space complexity (O(n))
+function fab(n){
+    if(n==0 || n==1){
+        return n
+    }
+    return fab(n-1)+fab(n-2)
+}
+console.log(fab(4))
