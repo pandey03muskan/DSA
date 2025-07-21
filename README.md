@@ -10,13 +10,9 @@
   Both will declare an empty array , suppose we need to define an array of size 5 and by default assign true to each in such cases we can use Array() constructor.
 
 #### Difference between Object and Map() in JS  (Learn from array problem -> Two Sum)
-  1. Key type
-     **object** -> Only strings and symbols
-     **Map** -> Any type (number, object, function...)
-  3. Declaration
-     **object** -> const obj = {};
-     **Map** -> const map = new Map();
-  5. Order of keys
-     **object** -> Not guaranteed (in older engines)
-     **Map** -> Maintains insertion order
+| Feature            | Object                         | Map                              |
+|--------------------|--------------------------------|-----------------------------------|
+| **1. Key Type**    | Only strings and symbols       | Any type (number, object, function...) |
+| **2. Declaration** | `const obj = {};`              | `const map = new Map();`         |
+| **3. Key Order**   | Not guaranteed (in older engines) | Maintains insertion order       |
 
