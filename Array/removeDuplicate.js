@@ -33,6 +33,7 @@
 
 
 
+// Type : 01
 
 // -----------------  brute force solution passed all testcases
 /**
@@ -63,3 +64,5 @@ var removeDuplicates = function(nums) {
     }
     return count
 };
+
+
