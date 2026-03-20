@@ -134,6 +134,9 @@ var MyLinkedList = function() {
  * @return {number}
  */
 MyLinkedList.prototype.get = function(index) {
+    if(this.head === null){
+        return -1;
+    }
     if(index<0 || index>this.size){
         return -1;
     }
@@ -170,7 +173,11 @@ MyLinkedList.prototype.addAtHead = function(val) {
  * @return {void}
  */
 MyLinkedList.prototype.addAtTail = function(val) {
-     let newNode = new Node(val);
+    let newNode = new Node(val);
+    if(this.head === null){
+        this.head = newNode;
+        return;
+    }
      let curr = this.head;
      while(curr.next !== null){
         curr = curr.next;
@@ -185,6 +192,9 @@ MyLinkedList.prototype.addAtTail = function(val) {
  * @return {void}
  */
 MyLinkedList.prototype.addAtIndex = function(index, val) {
+    // if(this.head === null){
+    //     return;
+    // }
     let newNode = new Node(val);
     let curr = this.head;
     if(index<0 || index>(this.size+1)){
@@ -251,10 +261,25 @@ MyLinkedList.prototype.deleteAtIndex = function(index) {
 
 
 var obj = new MyLinkedList();
-obj.addAtIndex(0,10)
-console.log("1",obj);
-obj.addAtIndex(0,20);
-console.log("2",obj);
-obj.addAtIndex(1,30);
-console.log("3",obj);
+// obj.addAtIndex(0,10)
+// console.log("1",obj);
+// obj.addAtIndex(0,20);
+// console.log("2",obj);
+// obj.addAtIndex(1,30);
+// console.log("3",obj);
 // console.log(obj.get(0));
+
+// obj.addAtHead(86);
+// console.log("1",obj);
+// obj.addAtIndex(1,54);
+// console.log("2",obj);
+// obj.addAtIndex(1,14);
+// console.log("3",obj);
+// obj.addAtHead(83);
+// console.log("4",obj);
+// obj.deleteAtIndex(4);
+// console.log("5",obj);
+
+obj.addAtIndex(1,0);
+console.log("1",obj);
+console.log("value :",(obj.get(0)));
